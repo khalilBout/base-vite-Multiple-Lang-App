@@ -1,19 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import "./index.css";
 
-import App from "./App";
-import Navbar from "./pages/Navbar";
 
 import Root from "./pages/Root";
-import Home from "./pages/Home";
+import Index from "./pages/Index";
 import NotFoundPage from "./pages/NotFoundPage";
 import ProfilePage from "./pages/ProfilePage";
 import ProfilesPage from "./pages/ProfilesPage";
 import ShopPage from "./pages/ShopPage";
 import ProductPage from "./pages/ProductPage";
-import Index from "./pages/Index";
 
 const router = createBrowserRouter([
   {
@@ -44,15 +41,6 @@ const router = createBrowserRouter([
     ],
   },
 ]);
-
-// ReactDOM.createRoot(document.getElementById("root")).render(
-//   <React.StrictMode>
-//     {/* <BrowserR>
-//     <RouterProvider router={router} />
-//     {/* <App /> */}
-//     {/* </BrowserRouter> */}
-//   </React.StrictMode>
-// );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
