@@ -2,6 +2,10 @@ import { NavLink } from "react-router-dom";
 import i18n from "i18next";
 
 const Navbar = () => {
+  const changeDir = () => {
+    window.document.dir = i18n.dir();
+  };
+
   return (
     <>
       <nav>
@@ -48,6 +52,7 @@ const Navbar = () => {
             <button
               onClick={() => {
                 i18n.changeLanguage("ar");
+                changeDir();
               }}
               className=" rounded-md bg-yellow-200 px-2 py-1 cursor-pointer hover:bg-yellow-300"
             >
@@ -56,6 +61,7 @@ const Navbar = () => {
             <button
               onClick={() => {
                 i18n.changeLanguage("en");
+                changeDir();
               }}
               className="rounded-md bg-yellow-200 px-2 py-1 cursor-pointer hover:bg-yellow-300"
             >
